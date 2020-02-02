@@ -1,9 +1,9 @@
-GHDLSIMOPTS = --stop-time=100us
 SIM=isim
+DEPPATH=../../shared-teos
 
 build: build-$(SIM)
 
 view: view-$(SIM)
 
 # Make script
-include ../../fpgakit.mk
+include ../../../fpgakit/fpgakit.mk
