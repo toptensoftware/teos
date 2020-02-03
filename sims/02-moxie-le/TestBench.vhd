@@ -42,7 +42,7 @@ architecture behavior of TestBench is
     signal s_cpu_dout : std_logic_vector(15 downto 0);
     signal s_cpu_din : std_logic_vector(15 downto 0);
 
-	constant c_big_endian : std_logic := '1';
+	constant c_big_endian : std_logic := '0';
 
 begin
 
@@ -116,7 +116,7 @@ begin
 		s_ram_wr_mask <= s_cpu_wr_mask(0) & s_cpu_wr_mask(1);
 	end generate;
 
-	le_mask : if c_big_endian = '1' generate
+	le_mask : if c_big_endian = '0' generate
 		s_ram_wr_mask <= s_cpu_wr_mask;
 	end generate;
 
